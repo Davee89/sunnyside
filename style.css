@@ -19,22 +19,12 @@ body {
   font-size: 18px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(190px, auto);
   grid-template-areas:
     "header header header header"
-    "header header header header"
-    "header header header header"
-    "header header header header"
-    "main main main main"
-    "main main main main"
-    "main main main main"
     "main main main main"
     "section section section section"
-    "section section section section"
     "testimonials testimonials testimonials testimonials"
-    "testimonials testimonials testimonials testimonials"
-    "testimonials testimonials testimonials testimonials"
-    "pictures pictures pictures pictures"
     "pictures pictures pictures pictures"
     "footer footer footer footer";
   max-width: 1440px;
@@ -48,6 +38,7 @@ body {
   background-image: url(/images/desktop/image-header.jpg);
   background-size: contain;
   background-repeat: no-repeat;
+  min-height: 800px;
 }
 .header__logoset {
   display: flex;
@@ -58,6 +49,7 @@ body {
 }
 .header__nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .header__link {
@@ -91,12 +83,32 @@ body {
   left: 50%;
   margin-top: 2%;
 }
-/* Main */
+/* ------------------ Main ----------------------- */
 .main {
   grid-area: main;
-  background-color: aquamarine;
-  padding: 20px;
 }
+.main__partone {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0;
+}
+.main__block {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headline-2 {
+}
+.main__paragraph {
+  text-align: left;
+  max-width: 60%;
+}
+.main__image {
+  max-height: 600px;
+}
+
 /* Section-1 */
 .section-1 {
   grid-area: section;
