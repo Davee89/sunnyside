@@ -19,22 +19,12 @@ body {
   font-size: 18px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(190px, auto);
   grid-template-areas:
     "header header header header"
-    "header header header header"
-    "header header header header"
-    "header header header header"
-    "main main main main"
-    "main main main main"
-    "main main main main"
     "main main main main"
     "section section section section"
-    "section section section section"
     "testimonials testimonials testimonials testimonials"
-    "testimonials testimonials testimonials testimonials"
-    "testimonials testimonials testimonials testimonials"
-    "pictures pictures pictures pictures"
     "pictures pictures pictures pictures"
     "footer footer footer footer";
   max-width: 1440px;
@@ -48,6 +38,7 @@ body {
   background-image: url(/images/desktop/image-header.jpg);
   background-size: contain;
   background-repeat: no-repeat;
+  min-height: 800px;
 }
 .header__logoset {
   display: flex;
@@ -58,6 +49,7 @@ body {
 }
 .header__nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .header__link {
@@ -91,11 +83,63 @@ body {
   left: 50%;
   margin-top: 2%;
 }
-/* Main */
+/* ------------------ Main ----------------------- */
 .main {
   grid-area: main;
-  background-color: aquamarine;
-  padding: 20px;
+}
+.main__partone {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 1440px;
+  margin: 0;
+}
+.main__block {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8%;
+  gap: 20px;
+  background-color: var(--White);
+}
+.headline-2 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0;
+}
+.main__paragraph {
+  text-align: left;
+  font-family: "Barlow", sans-serif;
+  color: var(--grayishblue);
+}
+.main__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  color: var(--darkblue);
+}
+.main__link1:hover::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 140px;
+  background-color: rgb(230, 198, 16);
+  margin-left: -5px;
+}
+.main__link2:hover::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 140px;
+  background-color: rgb(219, 56, 24);
+  margin-left: -5px;
+}
+.main__image {
+  max-height: 600px;
+}
+.main__blockTwo {
+  order: 1;
 }
 /* Section-1 */
 .section-1 {
