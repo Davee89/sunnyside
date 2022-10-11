@@ -159,7 +159,7 @@ body {
   background-color: yellow;
   padding: 20px;
 }
-/* Footer */
+/* ------------- Footer ------------------ */
 .footer {
   grid-area: footer;
   background-color: violet;
